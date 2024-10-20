@@ -1,715 +1,890 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 400px;
+  z-index: 5;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(-250px);
+  margin-top: -200px;
+  margin-left: 750px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 1px;
+  position: relative;
+  text-align: right;
+}
+
+.nav-links ul li a {
+  color: #ffffff;
+  z-index: 1001;
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 10px;
+  padding-right: 50px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #b20101;
+  display: block;
+  margin-left: -28px;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.rectangle {
+  width: 100%;
+  height: 50px;
+  background-color: #b20101;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gradient-rectangle {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent)
+}
+
+.email {
+  position: absolute;
+  top: -5px;
+  left: 280px;
+  color: white;
+  font-size: 16px;
+}
+
+.phone {
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  color: white;
+  font-size: 16px;
+}
+
+.image1 {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 20px;
+  height: 30px;
+}
+
+.image2 {
+  position: absolute;
+  top: 15px;
+  left: 250px;
+  width: 30px;
+  height: 20px;
+}
+
+.image3 {
+  position: relative;
+  padding-left: 2510px;
+  padding-top: 11px;
+  width: 25px;
+  height: 25px;
+}
+
+.services .column .card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+  transform-style: preserve-3d; /* Add this property */
+}
+
+.text-box {
+  max-width: 800px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 50px 0 50px;
+  font-size: 62px;
+  color: #fff;
+  transform: translateY(10px);
+  line-height: 1.2; /* Adjust the value as needed */
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 30px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+
+  transition: 1s;
+}
+
+.hero-btn:hover {
+  border: 1px solid #b20101;
+  background: #b20101;
+  padding: 22px 44px;
+}
+
+.checkbtn{
+  font-size: 100px;
+  color: white;
+  transform: translateY(-450px);
+  line-height: 80px;
+  margin-right: 40px;
+  float: right;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+#check{
+  display: none;
+  transform: translateY(100px);
+} 
+
+.menu-icon{
+  z-index: 10001;
+  display: flex;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 1500px) {
+  .text-box h1 {
+    font-size: 60px;
+    transition: 0.2s;
+  } 
+
+  .checkbtn{
+    font-size: 100px;
+    color: white;
+    transform: translateX(-20px) translateY(-1250px);
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: #483f3f;
   }
   
-  .header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpeg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  #check{
+    display: none;
+    transform: translateX(-20px) translateY(-1250px);
+    transition: 0.5s;
   }
-  
-  nav {
+
+  /*.menu-icon{
     display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
+    transform: translateX(-100px);
+    transform: translateY(-100px);
+    float: right;
+    transition: 0.2s;
+  }*/
+
+  .nav-links ul li {
+    display: flex;
+    transition: 0.2s;
   }
-  
-  nav img {
-    width: 400px;
-  }
-  
+
   .nav-links {
-    flex: 1;
-    text-align: right;
-    padding-right: 10px;
+    /*position: fixed;*/
+    background: #b20101;
+    height: 100vh;
+    transform: translateX(1000px) translateY(-30px);
+    width: 400px;
+    top: 0;
+    z-index: 100;
+    transition: 0.2s;
   }
-  
+
+  #check:checked ~.nav-links{
+    transform: translateX(-10px) translateY(-30px);
+  }
+}
+
+.about-us {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+p {
+  color: #777;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 20px;
+}
+
+.services {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.services h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px; /* Add this line */
+}
+
+
+.services .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%; /* Adjust the top margin as needed */
+  margin-bottom: -3%; /* Adjust the bottom margin as needed */
+}
+.services .column .card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d; /* Add this property */
+}
+
+.services .column {
+  flex-basis: 31%;
+  background-color: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  /* padding: 20px 12px; Remove this line */
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+
+.services h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 10px 0;
+  transform: translateY(230px);
+}
+
+.services .column:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  transform: rotateY(-180deg); /* Adjust the rotation direction */
+  perspective: 1500px; /* Adjust the perspective value */
+}
+
+
+.services .column .card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d; /* Preserve 3D transformation */
+}
+
+.services .column .card-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the backface of the card */
+}
+
+.services .column .card-front h3 {
+  backface-visibility: hidden;
+}
+
+/*.services .column .card-front p {
+  display: none;
+}*/
+
+.services .column .card-back {
+  padding: 20px;
+  backface-visibility: hidden; /* Hide the backface of the card */
+  transform: rotateY(180deg);
+}
+
+.services .column .card-back p {
+  transform: rotateY(180deg);
+}
+
+.services .column .card-back ul {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  backface-visibility: hidden;
+  transform: translateX(-100px);
+  font-size: 20px;
+}
+
+.services .column .card-back ul li {
+  transform: rotateY(-180deg);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+
+.services .column:hover .card-inner {
+  transform: rotateY(180deg); /* Flip the inner content on hover */
+}
+
+.services p {
+  margin-bottom: 10px; /* Adjust the bottom margin as needed */
+  text-align: left;
+  padding-left: 20px; /* Adjust the left padding as needed */
+}
+
+.services ul {
+  list-style-type: disc; /* Use disc style for bullet points */
+  margin-left: 20px; /* Adjust the indentation as needed */
+  text-align: left;
+}
+
+.services ul li {
+  margin-bottom: 5px; /* Adjust the bottom margin as needed */
+}
+
+.projects {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.projects h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project:hover {
+  background-color: #ececec;
+}
+
+.project h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #b20101;
+}
+
+.project h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-details {
+  color: #777;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: none;
+}
+
+
+.gallery {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery .column {
+  flex-basis: calc(33.33% - 20px);
+  background: #483f3f;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.gallery .column:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gallery .column img {
+  width: 100%;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.clients {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact {
+  background-color: #b20101;
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 55vh;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 600;
+  width: 100%; /* Set the width to 100% to span the entire row */
+  order: 1; /* Change the order of the heading */
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  width: 100%; /* Set the width to 100% to span the entire row */
+  order: 2; /* Change the order of the text */
+}
+
+.contact-box {
+  flex-basis: 60%;
+  order: 3; /* Change the order of the contact box */
+  width: 60%; /* Set the width of the contact box */
+}
+.contact-message {
+  flex: 1;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #b20101;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #800000;
+}
+
+.contact-info {
+  flex-basis: 35%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align the contact info to the right */
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info-item1 .image5{
+  width: 45px;
+  height: 54px;
+  margin-right: -45px;
+  transform: translateY(-400px) translateX(-30px);
+}
+.contact-info-item2 .image6 {
+  width: 50px;
+  height: 35px;
+  margin-right: 15px;
+  transform: translateY(-355px) translateX(73px);
+}
+
+.contact-info-item3 .image7 {
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+  transform: translateY(-320px) translateX(233px);
+}
+
+.contact-info-item1 p {
+  font-size: 20px;
+  color: #ffffff;
+  margin:0;
+  transform: translateY(-470px) translateX(10px);
+}
+
+.contact-info-item2 p {
+  font-size: 20px;
+  color: #ffffff;
+  margin:0;
+  transform: translateY(-411px) translateX(116px);
+}
+
+.contact-info-item3 p {
+  font-size: 20px;
+  color: #ffffff;
+  margin:0;
+  transform: translateY(-395px) translateX(285px);
+}
+
+.services h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.services .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.services .column {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.services h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  transform: translateY(410px);
+}
+
+.services img {
+  width: 200px;
+  transform: translateY(110px);
+}
+
+.services .column:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.services p {
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 70px; /* Adjust the value as needed */
+}
+
+.services ul {
+  list-style-type: disc; /* Use disc style for bullet points */
+  margin-left: 20px; /* Adjust the indentation as needed */
+  padding-left: 70px;
+  text-align: left;
+}
+
+.services ul li {
+  margin-bottom: 5px; /* Add some space between each bullet point */
+}
+
+.services .card-back ul p {
+  margin-right: -90px;
+}  
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.logo1,
+.logo2,
+.logo3 {
+  width: 33.33%; /* Adjust the width as needed */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.logo4,
+.logo5,
+.logo6 {
+  width: 25%;
+  padding: 85px;
+}
+
+.logo1 img,
+.logo2 img,
+.logo3 img,
+.logo4 img,
+.logo5 img,
+.logo6 img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.pic-column{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.pic-column img{
+  width: 100%;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover{
+  background: rgba(226,0,0,0.7);
+}
+.layer h2{
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h2{
+  bottom: 49%;
+  opacity:1;
+}
+.location-map {
+  width: 100%;
+  order: 5; /* Change the order of the map */
+  margin-top: -1120px; /* Add some top margin for spacing */
+  transform: translateX(130px)
+}
+
+@media(max-width: 2300px){
   .nav-links ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     transform: translateX(-200px);
-    margin-top: -155px;
+    margin-top: -200px;
+    margin-left: 300px;
+    transition: 0.2s;
   }
-  
-  .nav-links ul li {
+}
+
+@media(max-width: 2268px){
+  .nav-links ul {
     list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-    text-align: right;
-  }
-  
-  .nav-links ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 10px;
-    padding-right: 50px;
-  }
-  
-  .nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #b20101;
-    display: block;
-    margin: auto;
-  }
-  
-  .nav-links ul li:hover::after {
-    width: 100%;
-  }
-  
-  .rectangle {
-    width: 100%;
-    height: 50px;
-    background-color: #b20101;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .gradient-rectangle {
-    width: 100%;
-    height: 250px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent)
-}
-
-  .email {
-    position: absolute;
-    top: -5px;
-    left: 280px;
-    color: white;
-    font-size: 16px;
-  }
-  
-  .phone {
-    position: absolute;
-    top: -5px;
-    left: 40px;
-    color: white;
-    font-size: 16px;
-  }
-  
-  .image1 {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-    width: 20px;
-    height: 30px;
-  }
-  
-  .image2 {
-    position: absolute;
-    top: 15px;
-    left: 250px;
-    width: 30px;
-    height: 20px;
-  }
-  
-  .image3 {
-    position: relative;
-    padding-left: 2510px;
-    padding-top: 11px;
-    width: 25px;
-    height: 25px;
-  }
-  
-  .services .column .card-back {
-    transform: rotateY(180deg);
-    padding: 20px;
-    transform-style: preserve-3d; /* Add this property */
-  }
-
-  .text-box {
-    max-width: 800px;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .text-box h1 {
-    font-size: 62px;
-  }
-  
-  .text-box p {
-    margin: 50px 0 50px;
-    font-size: 62px;
-    color: #fff;
-    transform: translateY(10px);
-    line-height: 1.2; /* Adjust the value as needed */
-  }
-
-  .hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 30px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .hero-btn:hover {
-    border: 1px solid #b20101;
-    background: #b20101;
-    transition: 1s;
-  }
-  
-  @media (max-width: 700px) {
-    .text-box h1 {
-      font-size: 20px;
-    }
-  
-    .nav-links ul li {
-      display: block;
-    }
-  
-    .nav-links {
-      position: absolute;
-      background: #b20101;
-      height: 100vh;
-      width: 200px;
-      top: 0;
-      right: 0;
-      text-align: left;
-      z-index: 0;
-    }
-  }
-  
-  .about-us {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  h1 {
-    font-size: 40px;
-    font-weight: 600;
-  }
-  
-  p {
-    color: #777;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 20px;
-  }
-  
-  .services {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .services h1 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 40px; /* Add this line */
-  }
-  
-  
-  .services .row {
     display: flex;
-    justify-content: space-between;
-    margin-top: 3%; /* Adjust the top margin as needed */
-    margin-bottom: -3%; /* Adjust the bottom margin as needed */
+    justify-content: flex-end;
+    transform: translateX(-200px);
+    margin-top: -200px;
+    margin-left: 300px;
+    transition: 0.2s;
   }
-  .services .column .card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d; /* Add this property */
-  }
-  
-  .services .column {
-    flex-basis: 31%;
-    background-color: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    /* padding: 20px 12px; Remove this line */
-    box-sizing: border-box;
-    transition: 0.5s;
-  }
-  
-  
-  .services h3 {
+}
+
+@media(max-width: 1960px){
+  section{
+    padding: 0 7%;
+    transition: 0.2s;
     text-align: center;
-    font-weight: 900;
-    font-size: 30px;
-    margin: 10px 0;
-    transform: translateY(230px);
-  }
-  
-  .services .column:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-    transform: rotateY(-180deg); /* Adjust the rotation direction */
-    perspective: 1500px; /* Adjust the perspective value */
-  }
-  
-  
-  .services .column .card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    transform-style: preserve-3d; /* Preserve 3D transformation */
-  }
-  
-  .services .column .card-front {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden; /* Hide the backface of the card */
   }
 
-  .services .column .card-front p {
-    display: none;
-  }
-  
-  .services .column .card-back {
-    transform: rotateY(180deg);
-    padding: 20px;
-    backface-visibility: hidden; /* Hide the backface of the card */
+  .nav-links{
+    right: 3%;
+    transition: 0.2s;
   }
 
-  .services .column .card-back p {
-    transform: rotateY(180deg);
-    visibility: visible;
-  }
-
-  .services .column .card-back ul {
-    direction: rtl;
-    unicode-bidi: plaintext;
-    transform: translateX(-100px);
-    font-size: 20px;
-  }
-  
-  .services .column .card-back ul li {
-    transform: rotateY(-180deg);
-    direction: ltr;
-    unicode-bidi: bidi-override;
-  }
-  
-  
-  .services .column:hover .card-inner {
-    transform: rotateY(180deg); /* Flip the inner content on hover */
-  }
-  
-  .services p {
-    margin-bottom: 10px; /* Adjust the bottom margin as needed */
-    text-align: left;
-    padding-left: 20px; /* Adjust the left padding as needed */
-  }
-  
-  .services ul {
-    list-style-type: disc; /* Use disc style for bullet points */
-    margin-left: 20px; /* Adjust the indentation as needed */
-    text-align: left;
-  }
-  
-  .services ul li {
-    margin-bottom: 5px; /* Adjust the bottom margin as needed */
-  }
-  
-  .projects {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-}
-
-.projects h1 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.project {
-    margin-bottom: 40px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.project:hover {
-    background-color: #ececec;
-}
-
-.project h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #b20101;
-}
-
-.project h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.project-details {
-    color: #777;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
-    margin-bottom: 10px;
-    text-align: left;
-    display: none;
-}
-
-  
-.gallery {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  .gallery .row {
+  .nav-links ul {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    transform: translateX(-200px);
+    margin-top: -200px;
+    margin-left: 50px;
+    transition: 0.2s;
   }
-  
-  .gallery .column {
-    flex-basis: calc(33.33% - 20px);
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+
+  .header{
+    padding: 15px 3%;
+    transition: 0.2s;
   }
-  
-  .gallery .column:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .gallery .column img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .clients {
-    width: 80%;
-    margin: auto;
+}
+
+@media(max-width: 1800px){
+  section{
+    padding: 0 7%;
+    transition: 0.2s;
     text-align: center;
-    padding-top: 50px;
+  }
+  .header{
+    padding: 50px 3%;
+    transition: 0.2s;
   }
   
+}
+
+@media(max-width: 1700px){
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -120px;
+    margin-top: -200px;
+    transition: 0.2s;
+  }
+}
+
+@media(max-width: 1600px){
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -170px;
+    margin-top: -200px;
+    transition: 0.2s;
+  }
+}
+
+@media(max-width: 1300px){
+  .row{
+    flex-direction: column;
+  }
+
+  .nav-links {
+    height: 100vh;
+    width: 300px;
+    transition: 0.2s;
+  }
+}
+
+@media(max-width: 700px){
+  
+}
+@media (max-width: 700px) {
   .contact {
-    background-color: #b20101;
-    color: #fff;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    min-height: 55vh;
-    box-sizing: border-box;
-    z-index: 9999;
+    align-items: flex-start;
   }
-  
   
   .contact h1 {
-    text-align: center;
     margin-bottom: 20px;
-    font-size: 36px;
-    font-weight: 600;
-    width: 100%; /* Set the width to 100% to span the entire row */
-    order: 1; /* Change the order of the heading */
-  }
-  
-  .contact p {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #ffffff;
-    font-size: 18px;
-    width: 100%; /* Set the width to 100% to span the entire row */
-    order: 2; /* Change the order of the text */
-  }
-  
-  .contact-box {
-    flex-basis: 60%;
-    order: 3; /* Change the order of the contact box */
-    width: 60%; /* Set the width of the contact box */
-  }
-  .contact-message {
-    flex: 1;
-  }
-  
-  .contact-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form textarea {
-    height: 150px;
-  }
-  
-  .contact-form button[type="submit"] {
-    background-color: #b20101;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  .contact-form button[type="submit"]:hover {
-    background-color: #800000;
   }
   
   .contact-info {
-    flex-basis: 35%;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Align the contact info to the right */
+    margin-left: 0;
   }
   
-  .contact-info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .contact-info-item1 .image5{
-    width: 45px;
-    height: 54px;
-    margin-right: -45px;
-    transform: translateY(-400px) translateX(-30px);
-  }
-  .contact-info-item2 .image6 {
-    width: 50px;
-    height: 35px;
-    margin-right: 15px;
-    transform: translateY(-355px) translateX(73px);
-  }
-  
-  .contact-info-item3 .image7 {
-    width: 65px;
-    height: 65px;
-    margin-right: 15px;
-    transform: translateY(-320px) translateX(233px);
-  }
-
-  .contact-info-item1 p {
-    font-size: 20px;
-    color: #ffffff;
-    margin:0;
-    transform: translateY(-470px) translateX(10px);
-  }
-  
-  .contact-info-item2 p {
-    font-size: 20px;
-    color: #ffffff;
-    margin:0;
-    transform: translateY(-411px) translateX(116px);
-  }
-  
-  .contact-info-item3 p {
-    font-size: 20px;
-    color: #ffffff;
-    margin:0;
-    transform: translateY(-395px) translateX(285px);
-  }
-  
-  .services h1 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .services .row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5%;
-  }
-  
-  .services .column {
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-  }
-  
-  .services h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-    transform: translateY(410px);
-  }
-  
-  .services img {
-    width: 200px;
-    transform: translateY(110px);
-  }
-
-  .services .column:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-  }
-
-  .services p {
-    margin-bottom: 20px;
-    text-align: left;
-    padding-left: 70px; /* Adjust the value as needed */
-  }
-
-  .services ul {
-    list-style-type: disc; /* Use disc style for bullet points */
-    margin-left: 20px; /* Adjust the indentation as needed */
-    padding-left: 70px;
-    text-align: left;
-  }
-  
-  .services ul li {
-    margin-bottom: 5px; /* Add some space between each bullet point */
-  }
-
-  .services .card-back ul p {
-    margin-right: -90px;
-  }  
-
-  .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .logo1,
-  .logo2,
-  .logo3 {
-    width: 33.33%; /* Adjust the width as needed */
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .logo4,
-  .logo5,
-  .logo6 {
-    width: 25%;
-    padding: 85px;
-  }
-  
-  .logo1 img,
-  .logo2 img,
-  .logo3 img,
-  .logo4 img,
-  .logo5 img,
-  .logo6 img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .pic-column{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-  }
-  .pic-column img{
-    width: 100%;
-  }
-  .layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-  }
-  .layer:hover{
-    background: rgba(226,0,0,0.7);
-  }
-  .layer h2{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-  }
-  .layer:hover h2{
-    bottom: 49%;
-    opacity:1;
-  }
   .location-map {
-    width: 100%;
-    order: 5; /* Change the order of the map */
-    margin-top: -1120px; /* Add some top margin for spacing */
-    transform: translateX(130px)
+    margin-top: 0;
   }
-  @media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
-  }
-  @media (max-width: 700px) {
-    .contact {
-      align-items: flex-start;
-    }
-    
-    .contact h1 {
-      margin-bottom: 20px;
-    }
-    
-    .contact-info {
-      margin-left: 0;
-    }
-    
-    .location-map {
-      margin-top: 0;
-    }
-  }
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}

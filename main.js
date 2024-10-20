@@ -9,3 +9,10 @@ projects.forEach(project => {
         });
     });
 });
+
+let menu = document.querySelector(".menu-icon");
+let navLinks = document.querySelector(".nav-links");
+
+menu.onclick = () => {
+    navLinks.classList.toggle('open');
+}
